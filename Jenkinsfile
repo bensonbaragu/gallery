@@ -2,10 +2,16 @@ pipeline {
     agent any
     
     stages {
-        stage("Print"){
+        stage("clone git"){
             steps{
-                echo "Hello world"    
+                git branch:'master' , url:'https://github.com/bensonbaragu/gallery.git'
             }
         }
+        stage("Install dependencies"){
+            steps{
+                sh 'npm install'
+            }
+        }
+        
     }
 }
