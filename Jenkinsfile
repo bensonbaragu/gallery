@@ -16,10 +16,7 @@ pipeline {
             steps{
                 sh 'npm test ./test'
             }
-            post {
-                always {
-                    junit '**/junit.xml'
-                }
+            post {                
                 success {
                     mail to: 'bensonbaragu@gmail.com',
                          subject: 'Test Success - Jenkins Pipeline',
