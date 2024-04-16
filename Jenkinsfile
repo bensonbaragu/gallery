@@ -18,12 +18,13 @@ pipeline {
             }            
         }        
     }
-    post {                
-                success {
+    post {
+        success {
                     mail to: 'bensonbaragu@gmail.com',
                          subject: 'Test Success - Jenkins Pipeline',
                          body: "The tests in the Jenkins pipeline have passed successfully."
-                }
+                }                
+                
                 
             }
 }
