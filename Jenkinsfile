@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("clone git"){
             steps{
-                git branch:'master' , url:'https://github.com/bensonbaragu/gallery.gi'
+                git branch:'master' , url:'https://github.com/bensonbaragu/gallery.git'
             }
         }
         stage("Install dependencies"){
