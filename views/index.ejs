@@ -50,13 +50,14 @@
         <br>
         
           <div class="row">
-            <% images.forEach(function(image){%>
+            <% if (images && images.length) { %>
+              <% images.forEach(function(image){%>
 
-              <div class="column">
+                <div class="column">
 
-                <a href="/image/<%= image._id %>"> <img src="<%= image.path %>" class="responsive-img" alt="<%= image.name %>"> </a>
-              </div>
-            <% }); %>  
+                  <a href="/image/<%= image._id %>"> <img src="<%= image.path %>" class="responsive-img" alt="<%= image.name %>"> </a>
+                </div>
+              <% }); %>  
           </div>
             
               
