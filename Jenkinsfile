@@ -15,8 +15,10 @@ pipeline {
         stage("npm test"){
             steps{
                 sh 'npm test ./test'
-            }
-            post {                
+            }            
+        }        
+    }
+    post {                
                 success {
                     mail to: 'bensonbaragu@gmail.com',
                          subject: 'Test Success - Jenkins Pipeline',
@@ -24,6 +26,4 @@ pipeline {
                 }
                 
             }
-        }
-    }
 }
